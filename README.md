@@ -76,8 +76,8 @@ Below is a minimal example of `values.yaml` file:
 
 ```yaml
 ---
-git_user_email: foo@bar.com
-git_user_name: Foo Bar
+git_user_email: "foo@bar.com"
+git_user_name: "Foo Bar"
 ```
 
 #### Advanced
@@ -86,12 +86,12 @@ Below is a more advanced example of `values.yaml` file:
 
 ```yaml
 ---
-git_user_email: foo@bar.com
-git_user_name: Foo Bar
+git_user_email: "foo@bar.com"
+git_user_name: "Foo Bar"
 exclude_roles:
   - slack
-neovim_version: master
-nitrogen_background: cats.png
+neovim_version: "master"
+nitrogen_background: "cats.png"
 ```
 
 
@@ -106,7 +106,7 @@ This shell script is also used to initialize your environment after installing `
 > NOTE: You must follow required steps before running this command or things may become unusable until fixed.
 
 ```bash
-$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ALT-F4-LLC/dotfiles/main/bin/dotfiles)"
+$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/jomar2/dotfiles/main/bin/dotfiles)"
 ```
 
 ### Update
