@@ -3,9 +3,6 @@
 Fully automated development environment for `blackglasses` at [The Alt-F4 Stream](https://www.twitch.tv/thealtf4stream) on Twitch.
 
 
-![The Alt-F4 Stream][preview]
-
-
 ## Goals
 
 Provide a fully automated `Manjaro with i3` development environment that should be easy to setup and maintain.
@@ -126,5 +123,3 @@ This will handle the following tasks:
 - Clone this repository locally to `~/.dotfiles`
 - Verify any `ansible-galaxy` plugins are updated
 - Run this playbook with the values in `~/.config/dotfiles/values.yaml`
-
-[preview]: https://github.com/ALT-F4-LLC/dotfiles/blob/main/TheAltF4Stream.gif "The Alt-F4 Stream"
