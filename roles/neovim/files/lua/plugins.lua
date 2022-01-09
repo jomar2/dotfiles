@@ -1,4 +1,4 @@
---local use = require("packer").use
+local use = require("packer").use
 local user_settings_file = require("../user_settings")
 
 return require("packer").startup({function()
@@ -64,6 +64,12 @@ return require("packer").startup({function()
       require("plugins/bufferline")
     end
   }
+
+-- MultiCursors
+ use {
+     "mg979/vim-visual-multi",
+ }
+
 
   -- Statusline.
   use {

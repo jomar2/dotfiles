@@ -3,6 +3,14 @@ if not present then
     return
 end
 
+-- Function for make mapping easier.
+local function map(mode, lhs, rhs, opts)
+  local options = {noremap = true}
+  if opts then options = vim.tbl_extend("force", options, opts) end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+
 local os = vim.loop.os_uname().sysname
 if os == "Linux" then
   telescope.setup {
@@ -19,8 +27,6 @@ if os == "Linux" then
       },
     },
   }
---  telescope.load_extension("media_files")
---  telescope.load_extension("find_directories")
   telescope.load_extension("fzf")
 else
   telescope.setup {
@@ -36,3 +42,11 @@ else
   telescope.load_extension("fzf")
   telescope.load_extension("find_directories")
 end
+
+map('i','<C-F>',":Telescope grep_string <CR>")
+map('v','<C-F>',"<y> :Telescope grep_string <p> <CR>")
+map('n','<C-F>',":Telescope grep_string<CR>")
+map("i","<C-p>","<esc>:Telescope find_files<CR>")
+map("n","<C-p>",":Telescope find_files<CR>")
+map("v","<C-p>","<esc>:Telescope find_files<CR>")
+

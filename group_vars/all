@@ -15,6 +15,7 @@ default_roles:
   - oh-my-tmux
   - ripgrep
   - nnn
+  - pcalc
   - git
   - bottom
   - k9s
