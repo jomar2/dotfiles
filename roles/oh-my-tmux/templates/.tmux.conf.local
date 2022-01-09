@@ -339,14 +339,16 @@ tmux_conf_copy_to_os_clipboard=false
 
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
-# unbind C-a
-# unbind C-b
+unbind C-a
+unbind C-b
 # set -g prefix C-a
 # bind C-a send-prefix
 
+set -g prefix2 C-Space                        # GNU-Screen compatible prefix
+bind C-Space send-prefix -2
 # move status line to top
 #set -g status-position top
-
+set -g default-terminal "kitty-256color"
 
 # -- custom variables ----------------------------------------------------------
 # to define a custom #{foo} variable, define a POSIX shell function between the
